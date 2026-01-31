@@ -1,7 +1,75 @@
-h1{
-    
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgb(253, 203, 160);
+    color: rgb(0, 0, 82);
 }
 
-img{
-    
+h1{
+    text-align: center;
+    font-size: 4rem;
+    text-shadow: 0.25rem 0.25rem 5px rgb(102, 180, 228);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: 0.25rem;
 }
+
+h2{
+    font-style: oblique;
+}
+
+#selfphoto{
+    text-align: center;
+}
+
+section{
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
+
+.boxsection{
+    border: 2px solid black;
+    border-radius: 20%;
+    padding: 2rem;
+    background-color: rgb(165, 220, 255);
+    color: rgb(255, 85, 0);
+}
+
+.sectionhead{
+    text-transform: uppercase;
+}
+
+#github{
+    font-style: oblique;
+}
+
+a:link {
+    color: aqua;
+} 
+a:visited{
+    color: blue;
+}  
+a:hover{
+    color: blueviolet;
+}  
+a:focus{
+    color: darkblue;
+} 
+a:active{
+    color: indigo;
+}
+
+.boxsection a:link {
+    color:orange;
+} 
+.boxsection a:visited{
+    color: orangered;
+}  
+.boxsection a:hover{
+    color: coral;
+}  
+.boxsection a:focus{
+    color: crimson;
+} 
+.boxsection a:active{
+    color:red;
+}
+
