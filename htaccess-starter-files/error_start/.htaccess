@@ -1,0 +1,2 @@
+ErrorDocument 404 /jp6727/235/error/error.html
+DirectoryIndex noterror.html

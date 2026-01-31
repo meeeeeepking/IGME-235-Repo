@@ -1,0 +1,60 @@
+
+    /*
+    color pallete
+    --cerulean: #006992ff;
+    --turquoise: #41ead4ff;
+    --sandy-brown: #f7934cff;
+    --bronze-spice: #cc5803ff;
+    --indigo-ink: #391463ff;
+    */
+
+    body{
+        font-family: arial, sans-serif;
+        background-color: antiquewhite;
+    }
+    h1 { 
+        font-family: sans-serif;
+        font-size: 75px;
+        }
+
+    h1,h2,h3,h4{
+        color: #41ead4ff;
+        font-family: Barrio;
+    }
+
+    blockquote { 
+        background-color: lightgray;
+        padding: 1rem;
+        width: 80vw;
+        }
+    p{
+        margin-left: 20px;
+        width: 75vw;
+    }
+    header{
+        background-color: #391463ff;
+        margin-bottom: 30px;
+    }
+
+    header nav{
+        color: #41ead4ff;
+    }
+
+    .side{
+        float:right;
+        margin: 0 20px;
+
+    }
+
+    section{
+        background-color: #f7934cff;
+    }
+
+    .border{
+        border: 2px solid;
+        color: #41ead4ff
+    }
+
+    a{
+        color: #006992ff;
+    }
