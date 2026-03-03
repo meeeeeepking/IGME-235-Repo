@@ -1,0 +1,193 @@
+*{
+    font-family: Arial, sans-serif;
+}
+
+h1,h2,h3,h4{
+    font-family: "Cal Sans", sans-serif;
+    letter-spacing: 1px;
+}   
+
+h2{
+    font-size: xx-large;
+    line-height: 1em;
+    margin: 0px
+}
+h3{
+    font-size: small;
+    font-weight: bolder;
+}
+
+p, li{
+    font-size:small;
+    line-height: 1.5em;
+}
+
+
+body{
+    width: 900px;
+    margin: 0px auto;
+    border: 2px solid black;
+    position: relative;
+}
+
+#big-picture{
+    position: absolute;
+    top: 0px;
+    z-index: -1;
+}
+
+h1{
+    position: absolute;
+    margin: 0px 1rem;
+    font-weight: 900;
+    letter-spacing: -10px;
+}
+
+h1 #b{
+    position: relative;
+    font-size: 5rem;
+    top: -2rem;
+}
+h1 #u{
+    position: relative;
+    font-size: 6rem;
+    left: -0.5rem;
+    top: 0.5rem;
+
+}
+h1 #z1{
+    position: relative;
+    font-size: 7rem;
+    top: -1.5rem;
+    left: -1rem;
+    color: red;
+    z-index: 1;
+}
+h1 #z2{
+    position: relative;
+    font-size: 7rem;
+    top: 1.5rem;
+    left: -3.5rem;
+}
+
+/*set up grid*/
+main{
+    display: grid;
+    grid-template-rows: repeat(3, 400px);
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: "picture picture picture list"
+                         "main main separator list"
+                         "lower-picture lower lower lower";
+    width: 825px;
+    height: 1200px;
+    margin: 0px 25px 0px 50px;
+}
+main div{
+    overflow: hidden;
+    margin: 10px;
+}
+main div *{
+    padding: 0px 5px;
+    margin: 0px
+}
+
+#main-article{
+    grid-area: main;
+}
+#main-article h3{
+    color: red;
+    margin: 1rem 0px;
+}
+#main-article .type-identifier{
+    position:absolute;
+    left: 55px;
+    top: 380px;
+    color: white;
+}
+#main-article .type-identifier::after{
+    content: "i";
+    color: red;
+    background-color: red;
+    margin-left: 2px;
+}
+#main-article .type-identifier::before{
+    content: "i";
+    color: red;
+    background-color: red;
+    margin-right: 2px;
+}
+
+#dividing-article{
+    background-color: rgb(230, 125, 30);
+    grid-area: separator;
+}
+#dividing-article h2{
+    font-size: large;
+}
+
+#list{
+    grid-area: list;
+}
+#list h2{
+    margin-top: 1em;
+}
+#list ul{
+    list-style: square;
+    list-style-position:inside;
+}
+#list ul li::marker{
+    color: red;
+    font-size: 2em;
+}
+
+
+
+#lower-article{
+    background-color: rgba(30, 35, 35);
+    grid-area: lower;
+    overflow: visible;
+    position: relative;
+}
+#lower-article h2{
+    color: rgba(200, 120, 50);
+    margin-bottom: 0.5em;
+}
+#lower-image{
+    position:relative;
+    left: -250px;
+    width: 350px;
+    float:left;
+    shape-outside: polygon(0px 90px, 130px 175px, 0px 300px);
+}
+#lower-article p{
+    color: white;
+    
+}
+#lower-article #image-bar{
+    padding: 0px;;
+    width:100%;
+}
+#lower-article .type-identifier{
+    text-transform: uppercase;
+    position: absolute;
+    top: -1.1em;
+    letter-spacing: 0px;
+    font-weight: 900;
+    font-size: large;
+}
+#lower-article .type-identifier span{
+    color:red;
+    padding: 0px;
+}
+
+footer #page-num{
+    float: left;
+}
+footer #date{
+    float: right;
+    letter-spacing: 1em;;
+}
+footer #workaround{
+    position: relative;
+    right: -9999px;
+}

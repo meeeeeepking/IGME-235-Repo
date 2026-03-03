@@ -1,0 +1,38 @@
+body{
+    background: purple;
+}
+.container{
+    background: lightgray;
+    max-width: 800px;
+    margin: 0px auto;
+}
+img{
+    max-width: 100%;
+}
+nav{
+    display: flex;
+    justify-content:space-around;
+    background: orange;
+}
+nav a{
+    flex: 1 0 50px
+}
+.feature-group{
+    display: flex;
+}
+
+@media screen and (max-width:900px){
+    nav{
+        background: greenyellow;
+    }
+}
+
+@media screen and (max-width:600px){
+    nav{
+        background: yellow;
+        flex-direction: column;
+    }
+    .feature-group{
+    flex-direction: column-reverse;
+    }
+}

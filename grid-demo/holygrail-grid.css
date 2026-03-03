@@ -1,0 +1,103 @@
+/**************************************
+General Formatting (Leave This Alone!)
+**************************************/
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    /* sets base font size for rem sizing */
+    font-size: 16px;
+    font-family: Calibri, Helvetica, Arial, sans-serif;
+}
+
+html,
+body {
+    margin: 0;
+}
+
+header,
+footer {
+    /* centers header and footer content horizontally and vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #86af49;
+}
+
+nav,
+aside,
+article {
+    padding: .5rem;
+}
+
+nav, aside {
+    background-color: #b5e7a0;
+    border: 1px dotted black; 
+}
+
+/*****************
+Grid Formatting  
+*****************/
+
+/*define grid area names*/
+header{
+    grid-area:header;
+}
+
+article{
+    grid-area:content;
+}
+
+nav{
+    grid-area:navbar;
+}
+
+aside{
+    grid-area:sidebar;
+}
+
+footer{
+    grid-area:footer;
+}
+
+/*put mobile css first*/
+#wrapper{
+    display: grid;
+    height: 100vh;
+    max-width: 1200px;
+    margin: 0px auto;
+    grid-template-areas: "header"
+                         "navbar"
+                         "content"
+                         "sidebar"
+                         "footer";
+    grid-template-rows: 1fr 2fr 10fr 2fr 1fr;
+
+}
+
+/*add next biggest breakpoint which would be tablet*/
+@media screen and (min-width:700px){
+    #wrapper{
+        grid-template-areas: "header header"
+                             "navbar content"
+                             "sidebar sidebar"
+                             "footer footer";
+        grid-template-rows: 1fr 10fr 1fr 1fr;
+        grid-template-columns: 20% auto;
+    }
+}
+
+/*then we do the desktop breakpoint*/
+
+@media screen and (min-width:900px){
+    #wrapper{
+        grid-template-areas: "header header header"
+                             "navbar content sidebar"
+                             "footer footer footer";
+        grid-template-rows: 1fr 10fr 1fr;
+        grid-template-columns: 20% auto 20%;
+    }
+}
+
